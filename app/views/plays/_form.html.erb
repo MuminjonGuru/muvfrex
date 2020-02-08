@@ -1,6 +1,5 @@
-<%= simple_form_for @play do |f| %>
-    <%= select_tag(:category_id, options_for_select(@categories), 
-        :prompt => "Select category") %>
+<%= simple_form_for @play, html: {multipart: true} do |f| %>
+    <%= f.select :category_id, @categories %>
     <%= f.input :title, label: "Play Title" %>
     <%= f.input :description %>
     <%= f.input :director %>
